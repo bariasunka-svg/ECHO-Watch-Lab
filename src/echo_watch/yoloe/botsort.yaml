@@ -1,0 +1,18 @@
+# ECHO Watch Lab EW-LAB-06 pinned BoT-SORT configuration (project-owned copy; AGPL-3.0-only like its source).
+# Source: installed Ultralytics 8.4.160 ultralytics/cfg/trackers/botsort.yaml,
+#   SHA-256 8cd88930d3be5557be0777f384eecff0a36a7011850fe613fc0a68178bfd5b01 (env/gpu, wheel-locked).
+# Values are the installed defaults with ReID explicitly OFF and sparse optical-flow motion compensation. They are
+# STARTING settings for the owner's evaluation, not measured optimal settings. The product reads THIS file, never the
+# library's current default tracker. track_buffer counts tracker UPDATES (one per processed source frame), not seconds.
+tracker_type: botsort
+track_high_thresh: 0.25
+track_low_thresh: 0.1
+new_track_thresh: 0.25
+track_buffer: 30
+match_thresh: 0.8
+fuse_score: True
+gmc_method: sparseOptFlow
+proximity_thresh: 0.5
+appearance_thresh: 0.8
+with_reid: False
+model: auto

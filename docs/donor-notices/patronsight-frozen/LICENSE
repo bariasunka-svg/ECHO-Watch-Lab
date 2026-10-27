@@ -1,0 +1,25 @@
+PatSight / PatronSight
+Original PatSight contributions: Copyright (c) 2026 Bari Asunka.
+
+Except where a file or component carries a separately identified third-party
+licence, original project contributions are licensed under the GNU Affero
+General Public License, version 3 only (AGPL-3.0-only).
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU Affero General Public License, version 3, as published
+by the Free Software Foundation.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See COPYING for the complete licence.
+
+Third-party code, models, libraries, assets and platform components retain
+their own copyrights and licences. See THIRD_PARTY_NOTICES.md and individual
+file notices. This grant does not relicense restricted third-party weights,
+customer data, unrelated donor projects or proprietary platform binaries.
+The covered combined application must be distributed in accordance with AGPL;
+a component notice is not an exception from applicable combined-work duties.
+
+No commercial payload or complete corresponding-source distribution has yet
+been approved. Source delivery and network-access obligations are specified
+in docs/release-compliance/SOURCE_DISTRIBUTION.md.

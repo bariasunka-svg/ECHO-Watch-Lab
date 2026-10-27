@@ -1,0 +1,10 @@
+{
+ "descriptor": "crop-appearance-v1",
+ "P": 0.76199,
+ "N": 0.426014,
+ "qualified": true,
+ "M": 0.594002,
+ "source": "closeouts/lab-workbench-20261026-064215/calibration/frozen_descriptor_v1.json",
+ "source_sha256": "cc0fe841c468f5e61f773ad5e8241a273934d785470f0ee696f179bfc42b3fb2",
+ "note": "Frozen global calibration (EW-LAB-01). No per-object exceptions."
+}

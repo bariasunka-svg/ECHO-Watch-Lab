@@ -1,0 +1,1060 @@
+{
+ "native_archive": {
+  "path": "vendor\\donors\\echo-watch-native-0.2.0-foundation-3d14d6502c9e-source.zip",
+  "sha256": "29332384727d47cb09386778f5e0e3e24c78a780390ac8f657b116daec759f97",
+  "tree": "3d14d6502c9e31af5853e1b3aaea3c8e1d048edbe975d21f99962fd02cfee014"
+ },
+ "patronsight_archive": {
+  "path": "vendor\\donors\\Patsight_PS27D_C3_reference_source.zip",
+  "sha256": "72efc34a1852bf9beced72edd26119d6f5f8bc2295efa5e35740c66f371703ea"
+ },
+ "not_adopted_from_native": [
+  "src/echo_watch/cli.py",
+  "tools/bootstrap/bootstrap_native.py",
+  "tools/build_source_archive.py",
+  "tools/intake/adopt.py",
+  "tools/intake/donor_intake.py",
+  "tools/intake/legacy_preservation.py"
+ ],
+ "files": [
+  {
+   "path": "src/echo_watch/__init__.py",
+   "sha256": "1d51ffa3787449d66226f0c126af728303abb1c1e33ff04f696e4c5f71532bd2",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/__init__.py",
+   "archive_sha256": "af85e419ddcce2b39e651209583166f988f012915e8017309e84fdf1b7871de6",
+   "changed": true,
+   "note": "Lab package description"
+  },
+  {
+   "path": "src/echo_watch/__main__.py",
+   "sha256": "f1015dbee832c224c978aa16a0c85a50b02e97761d6870f5101fc50ae4d068ae",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/__main__.py",
+   "archive_sha256": "cba59fe8bc1a4ae51412d086c23f47e51b89f268317eadcfc4bda5a40bc805b1",
+   "changed": true,
+   "note": "manual launch entry -> app.launch.main (Native CLI not adopted)"
+  },
+  {
+   "path": "src/echo_watch/app/__init__.py",
+   "sha256": "77fb7ff1175cbf91e697885634f2d64c5c7d4af814a7b859edd84391fe14cbbb",
+   "origin": "lab-new",
+   "note": ""
+  },
+  {
+   "path": "src/echo_watch/app/canvas_geometry.py",
+   "sha256": "a938f748237c9151a1a54483c04b2d29e73cd0e1d42dcbad61db904c17892ced",
+   "origin": "patronsight-archive (selected code)",
+   "archive_member": "src/patronsight/app/canvas_geometry.py",
+   "archive_sha256": "fcb89f5f64dbb029f707ee9efa71b2df53d848ae4e5a46de754e68f84045891e",
+   "changed": true,
+   "note": "body unchanged; header added"
+  },
+  {
+   "path": "src/echo_watch/app/controller.py",
+   "sha256": "4e160f0016a3920514349b113b88afd2419eb6ba76d23821d233f1ab85a8ff04",
+   "origin": "lab-new",
+   "note": "EW-LAB-05: guided setup step model, enrollment command (new/reuse/replace), saved setups, exact Start binding, source-change invalidation, finish actions; EW-LAB-06: GPU owner check before Scan/Start and idle-worker handover before the worker starts"
+  },
+  {
+   "path": "src/echo_watch/app/correction_flow.py",
+   "sha256": "f53b6ac72dc8ca42ea764f55c127b2d06603f98c751165119780ddd960c25225",
+   "origin": "lab-new",
+   "note": "EW-LAB-03 R1/R2: truthful save/retry/reconcile UI state, group description"
+  },
+  {
+   "path": "src/echo_watch/app/display.py",
+   "sha256": "aa264f69341bd72ea3eaca4038797ace858a3dbe50d0e2765672ea149c3e83d3",
+   "origin": "lab-new",
+   "note": ""
+  },
+  {
+   "path": "src/echo_watch/app/display_schedule.py",
+   "sha256": "0dd40580b91fdbcc4b4247e964695c58c711b8ea7324e1dde7a4fad0a727d223",
+   "origin": "lab-new",
+   "note": "EW-LAB-02 A: latest-completed paired display with generation validity"
+  },
+  {
+   "path": "src/echo_watch/app/launch.py",
+   "sha256": "2f0f3027842655731f2b386241c25e634261702ef7d70bcb3973633849a67973",
+   "origin": "lab-new",
+   "note": "EW-LAB-06: builds the analysis owner and the YOLOE controller (no model, no process)",
+   "patterns_from_patronsight_archive": {
+    "src/patronsight/app/application.py": "5bb1782edd7d6b9634e968dd7fe2e423e9b2ab62ffd657f300f2dc623834490d"
+   }
+  },
+  {
+   "path": "src/echo_watch/app/presentation.py",
+   "sha256": "ae92f4c54a5cec022f3d4da19c5094c43bf01a9cd705d2213c13074d05773af0",
+   "origin": "lab-new",
+   "note": "EW-LAB-03 R3: one paired presentation for image, boxes, tray and inspector"
+  },
+  {
+   "path": "src/echo_watch/app/resources.py",
+   "sha256": "b157cf4fbd19a386561d1522b03e3451e9bbd00b817e33747ecb54a48fd4d42b",
+   "origin": "lab-new",
+   "note": "EW-LAB-06: one application owner of GPU analysis (Display Assets or YOLOE)"
+  },
+  {
+   "path": "src/echo_watch/app/tasks.py",
+   "sha256": "ba0f2c9aaf2805c18c1257dcd7cfe17ea1c516dee8fbe1995a6e4f670faf44ff",
+   "origin": "lab-new",
+   "note": "",
+   "patterns_from_patronsight_archive": {
+    "src/patronsight/app/review_player.py": "89ecddb21f91a4e18dc563a6a98854c340a3fca7d7e837f363f4772436b9816a"
+   }
+  },
+  {
+   "path": "src/echo_watch/app/tk_app.py",
+   "sha256": "3c93f60f35f11db8b919d37b82fe8da03f5567d0eff27e18e03c60876ecaa1be",
+   "origin": "lab-new",
+   "note": "EW-LAB-05: Discover / Select / Configure / Monitor workbench after the owner's references; Lab-03/04 paired renderers and Review/Activity/correction paths retained; EW-LAB-06: YOLOE rail entry/page, header Pause/Stop follow the active mode, exit stops both",
+   "patterns_from_patronsight_archive": {
+    "src/patronsight/app/live_view.py": "af4c4862b0cf6999c710bf7be84d904debc24e7140aaca6a8dd5d46367317226",
+    "src/patronsight/app/visitor_profile.py": "8850ef67450e6bbfecb01dde3bd777b482965bf1f01f1e3bcf257b4a5100c0e5",
+    "src/patronsight/app/visitor_history_page.py": "1b571baa22a94393d570cca4f5d8a60cc8218662e3b41f366ddfad434f487637",
+    "src/patronsight/app/session_review.py": "172796089a25544c007a4a8ca1b1c29f597c0f16bfc4e7780c97be8d769f3544",
+    "src/patronsight/app/settings_workspace.py": "d76e655f52594f7fdec87e177843332c77e561f16c538289c6b3f62d50acb1d2"
+   }
+  },
+  {
+   "path": "src/echo_watch/app/tk_theme.py",
+   "sha256": "9945f5146f2053857b3bdc7ac70c0bc1a34c4e60f4b1149b1bf5599711accd01",
+   "origin": "patronsight-archive (selected code)",
+   "archive_member": "src/patronsight/app/dashboard_theme.py",
+   "archive_sha256": "cdcd181c88ecd3465d55ac54c4339e98ff3785c994d316fcc5450f063632993f",
+   "changed": true,
+   "note": "token structure from the donor; EW-LAB-05 values follow the owner's Display Assets references; styles new"
+  },
+  {
+   "path": "src/echo_watch/app/views.py",
+   "sha256": "65ab760134b6a77a7c65a5d660f2f83f33f055adfd6b798a4333e398b1296e39",
+   "origin": "lab-new",
+   "note": "EW-LAB-05: Tk-free projections of the four-step Display Assets screens and layout policy"
+  },
+  {
+   "path": "src/echo_watch/app/yoloe_controller.py",
+   "sha256": "d3006160519a6e3591358bc761594c268d1f31b0e9542b86305f967daa7ad48a",
+   "origin": "lab-new",
+   "note": "EW-LAB-06: GUI-free YOLOE page state and commands"
+  },
+  {
+   "path": "src/echo_watch/app/yoloe_page.py",
+   "sha256": "c71b95bb54cb7f87145ad0295e6ea5966333ae5443bd83520d774f02d60a3877",
+   "origin": "lab-new",
+   "note": "EW-LAB-06: YOLOE Tk page (fixed geometry, paired painting, results panel)"
+  },
+  {
+   "path": "src/echo_watch/app/yoloe_views.py",
+   "sha256": "b9a05ea7c239d851865c088ca2da22a5d9c099ee5557894b697c402b50ebd94a",
+   "origin": "lab-new",
+   "note": "EW-LAB-06: Tk-free YOLOE projections (labels, colours, counts, authority, layout)"
+  },
+  {
+   "path": "src/echo_watch/calibration/admission.json",
+   "sha256": "564a863d5167a2d0f4bce37cbee519dc392d80912a2388889f3285ad297aab91",
+   "origin": "lab-new",
+   "note": ""
+  },
+  {
+   "path": "src/echo_watch/config.py",
+   "sha256": "abcb8cde0238f111db011d68919f587d1a312fe45bfdefa0d238f5acad65ed3f",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/config.py",
+   "archive_sha256": "fa49309e29aaed78ae32b6513bdf2e0749a76900e6a7d1d318410ae2d57c0be5",
+   "changed": true,
+   "note": "Lab paths: env/ui coordinator, env/gpu worker only, no CPU interpreter; data/operator; run evidence cap"
+  },
+  {
+   "path": "src/echo_watch/engine/__init__.py",
+   "sha256": "78b0b23530d6db5c9f4e09e3e350e247b5a4975b3372ac8b182329ac7d00d16f",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/engine/__init__.py",
+   "archive_sha256": "78b0b23530d6db5c9f4e09e3e350e247b5a4975b3372ac8b182329ac7d00d16f",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "src/echo_watch/engine/api.py",
+   "sha256": "c9b0868ffba4018595e2d17875ed9905e69d3cb9ec7d62733f55f0043abf4c68",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/engine/api.py",
+   "archive_sha256": "3ec4b7d7cecb4261f101f18ba12729b56eddba60dcacf57ce39d8fcc9fe2f121",
+   "changed": true,
+   "note": "GPU interpreter only; EW-LAB-05: Start boundary re-validates exact references and setup binding"
+  },
+  {
+   "path": "src/echo_watch/engine/board.py",
+   "sha256": "1d33f7fb73a18c407a7b018a2eb8ea96d48c7106198a76811312c819a915d874",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/engine/board.py",
+   "archive_sha256": "2bdcdc9342b1c5f2e953c611034a25b9cdcd81a359df516072be678134bbf102",
+   "changed": true,
+   "note": "passes decision admission into observations"
+  },
+  {
+   "path": "src/echo_watch/engine/capture.py",
+   "sha256": "cfc78f555a409c2b086a0ade71ff4aedc105f702b86e0d7b7d3b4a7acd87eab2",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/engine/capture.py",
+   "archive_sha256": "cfc78f555a409c2b086a0ade71ff4aedc105f702b86e0d7b7d3b4a7acd87eab2",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "src/echo_watch/engine/compat.py",
+   "sha256": "b2101874f323dc28e56665b266683ab33da3a8ae556ff652d1587ffad89baa80",
+   "origin": "lab-new",
+   "note": "EW-LAB-05: the one enrollment compatibility predicate (content scope, size, model)"
+  },
+  {
+   "path": "src/echo_watch/engine/contracts.py",
+   "sha256": "d8abd1be7e52639e8e66b0b2eaf823567ec5bf411388aa4d9bb26b2a855e57f3",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/engine/contracts.py",
+   "archive_sha256": "5dd46dcfd5c68bb2f814cd6c495fb222e8f7f09b7b2980b3a7e43b0b367205e9",
+   "changed": true,
+   "note": "ItemObservation.admission; projection carries admission/alternatives"
+  },
+  {
+   "path": "src/echo_watch/engine/evaluator.py",
+   "sha256": "4094c83bbcd2da9ccb6965304a02369e0410cfd2d2129fe48bf1688d0ff2eec6",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/engine/evaluator.py",
+   "archive_sha256": "9855572e14af4662488939e1efff7241ed915da13e0d4493e8a4ea620a6618ad",
+   "changed": true,
+   "note": "fork()/adopt() isolated speculative state; candidates in Evaluation"
+  },
+  {
+   "path": "src/echo_watch/engine/files.py",
+   "sha256": "99348a85da2f541bdf3afec8ec9d0db8e886c53125d6529d28e8cec6ee3b534a",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/engine/files.py",
+   "archive_sha256": "99348a85da2f541bdf3afec8ec9d0db8e886c53125d6529d28e8cec6ee3b534a",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "src/echo_watch/engine/inspect.py",
+   "sha256": "e30e2a2c3491f316f7b4ef615573efedec656fe890b834db30dd48e6b4d450a1",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/engine/inspect.py",
+   "archive_sha256": "e30e2a2c3491f316f7b4ef615573efedec656fe890b834db30dd48e6b4d450a1",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "src/echo_watch/engine/latest.py",
+   "sha256": "8951772e0925136f81c624ab1ddae76559669cd452114e146e7ee8b7c55eb4cb",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/engine/latest.py",
+   "archive_sha256": "8951772e0925136f81c624ab1ddae76559669cd452114e146e7ee8b7c55eb4cb",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "src/echo_watch/engine/library.py",
+   "sha256": "1ccb33ea2458f51a8a8797cf6a37e0f6d9ae3eca6bb9aa0dcc28916e4f26309e",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/engine/library.py",
+   "archive_sha256": "ff6069f26b4d07bb7ba48de0bbeaf01a1c71597c874c33dad4bcff709dac9845",
+   "changed": true,
+   "note": "manual candidate (recovers a Scan miss), rename (append-only), profiles(); EW-LAB-05: enroll (new + explicit reuse, one idempotent command), geometry veto removed, compat-scoped hints/replacement, resolve_refs for Start"
+  },
+  {
+   "path": "src/echo_watch/engine/pipeline.py",
+   "sha256": "06b8e759e2aaad57367bb0bc178f7e83453646d6d351c91f2901e5798e58d460",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/engine/pipeline.py",
+   "archive_sha256": "06b8e759e2aaad57367bb0bc178f7e83453646d6d351c91f2901e5798e58d460",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "src/echo_watch/engine/recording.py",
+   "sha256": "8aa1fcd65dae5a2e7238d28ed7f663765e798312808e123b773e04ef3564356e",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/engine/recording.py",
+   "archive_sha256": "8aa1fcd65dae5a2e7238d28ed7f663765e798312808e123b773e04ef3564356e",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "src/echo_watch/engine/render.py",
+   "sha256": "5f4da914f3236b87ebb85eb43835da45b602740c1525e18e3b48bdd08d9edafc",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/engine/render.py",
+   "archive_sha256": "e3139c0e513e1c8ed54e6bef90a4ccc118081ae1e625bfbf59ee674d80d7863c",
+   "changed": true,
+   "note": "branding string"
+  },
+  {
+   "path": "src/echo_watch/engine/session.py",
+   "sha256": "9494ab26f17f077e21a9df98a5954a1bbb431e12f7e8350faf010b3de0edd05a",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/engine/session.py",
+   "archive_sha256": "c68c9b5eaf9648f31e6902cab963fbc665e6c3fbf422a9ae23f9a5bd9d6abd26",
+   "changed": true,
+   "note": "ambiguity carried across Resume (Q3 repair); defect A: fork evaluation, age recheck at commit under the final lock, version check; prior states/candidates/negative in trace; gate in trace+manifest; run-level item events; live_events; EW-LAB-05: review allowance parameter + saved-setup binding/metadata only"
+  },
+  {
+   "path": "src/echo_watch/engine/setups.py",
+   "sha256": "8266c93f92f42171d6c789fea7f550941e2d2d337752e564bd470418f086226e",
+   "origin": "lab-new",
+   "note": "EW-LAB-05: versioned, validated saved-setup JSON artifacts"
+  },
+  {
+   "path": "src/echo_watch/engine/store.py",
+   "sha256": "875e7e2a47c98e249dc2797b1f54fba5eda49ea9b6330ae26a4c386e8a84559c",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/engine/store.py",
+   "archive_sha256": "7380414efd486d50f1fe709e9ae4a1f119a679080e171637a9af08654d6be4f6",
+   "changed": true,
+   "note": "corrections + item_names tables, activity indexes"
+  },
+  {
+   "path": "src/echo_watch/engine/trace.py",
+   "sha256": "d511d02904cf84b44b4684fa1d612b5ddcaf3d2f37f35ee98b2b3e6e8799b939",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/engine/trace.py",
+   "archive_sha256": "d511d02904cf84b44b4684fa1d612b5ddcaf3d2f37f35ee98b2b3e6e8799b939",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "src/echo_watch/fixtures/__init__.py",
+   "sha256": "982c72d94dbc8c543b349f4019c63cbde9e05add145cb0e3750763999100496e",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/fixtures/__init__.py",
+   "archive_sha256": "982c72d94dbc8c543b349f4019c63cbde9e05add145cb0e3750763999100496e",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "src/echo_watch/fixtures/synthetic_scene.py",
+   "sha256": "018ba0040045a34b66d50e87e7d253e555fd0cb947d3737b7a39f70d4b371193",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/fixtures/synthetic_scene.py",
+   "archive_sha256": "018ba0040045a34b66d50e87e7d253e555fd0cb947d3737b7a39f70d4b371193",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "src/echo_watch/frames.py",
+   "sha256": "8eb13936c29a15897e68ac96d9ee18c55ec401638f0ddd7a0b4b651873e2aa5a",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/frames.py",
+   "archive_sha256": "8eb13936c29a15897e68ac96d9ee18c55ec401638f0ddd7a0b4b651873e2aa5a",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "src/echo_watch/geometry.py",
+   "sha256": "c19fe57d166a65dc3f1204650cdc46f5b58157696a678e34fd8a5b842aca20f3",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/geometry.py",
+   "archive_sha256": "c19fe57d166a65dc3f1204650cdc46f5b58157696a678e34fd8a5b842aca20f3",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "src/echo_watch/guards.py",
+   "sha256": "c260deeab2c8cdb6f152f16db462f2561395ea80807e938e861e0cd1ba6a27d3",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/guards.py",
+   "archive_sha256": "13a8a8a4dfc770f74a51c673a84c697647bc99edecf778d96c2efd261458d3f7",
+   "changed": true,
+   "note": "branding strings"
+  },
+  {
+   "path": "src/echo_watch/item_policy.py",
+   "sha256": "f453922773035094ed85db2aa60a559223985249b6c880634af5828b8c1ccf72",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/item_policy.py",
+   "archive_sha256": "5700dc29cec75c506af3d1d2ade277bf1f6757117ccb85e61c0a8c5c5d1db0a9",
+   "changed": true,
+   "note": "item-memory-v3: absolute admission gate on acquisition AND ownership, bounded unresolved hold, weak evidence never absence, low-confidence resembling proposals block absence, clone() for fork/commit, candidate rows for trace (defect P1 tablet-as-phone)"
+  },
+  {
+   "path": "src/echo_watch/matching.py",
+   "sha256": "d82cd0bf65c65a129e171657d80c7c58c1058798707c7e4b56a17f73775ed0d9",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/matching.py",
+   "archive_sha256": "09cfe6476c55306f3cac58031f617420dc7652aa49aae5a9485a91a2e4124e9a",
+   "changed": true,
+   "note": "DESCRIPTOR_VERSION, AdmissionGate (P/N/M rule), frozen calibration loader"
+  },
+  {
+   "path": "src/echo_watch/metrics.py",
+   "sha256": "4d3e30fb8b1eeb7299b36e0b762e3881a080a9a5c82e0e230daeff914706decf",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/metrics.py",
+   "archive_sha256": "c7b3fa7926e2445588b0ab8e8b2d0c65a2720a74d9262dc8cb0c73828df80145",
+   "changed": true,
+   "note": "ResourceSampler gpu_fn (worker-reported VRAM in the UI process)"
+  },
+  {
+   "path": "src/echo_watch/ownedjob.py",
+   "sha256": "4d0b24839fd7d4f0fffb19714f90dd30ba69813b7f94edc7dc13f864a0845650",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/ownedjob.py",
+   "archive_sha256": "4d0b24839fd7d4f0fffb19714f90dd30ba69813b7f94edc7dc13f864a0845650",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "src/echo_watch/review/__init__.py",
+   "sha256": "c2770142be4b9f511db9d142b99616b4d190ab744ee7ddec2ebbe8ed598bc940",
+   "origin": "lab-new",
+   "note": ""
+  },
+  {
+   "path": "src/echo_watch/review/activity.py",
+   "sha256": "6b403c26162d4cb0e0b04be389c20023788c13f025e646ea06c6edd034123d71",
+   "origin": "lab-new",
+   "note": "",
+   "patterns_from_patronsight_archive": {
+    "src/patronsight/visitor_activity.py": "086369ac8f9170ad4e9b512c4309784854f303f5507be8a2a7a87377a88bc6ab",
+    "src/patronsight/app/visitor_history_page.py": "1b571baa22a94393d570cca4f5d8a60cc8218662e3b41f366ddfad434f487637"
+   }
+  },
+  {
+   "path": "src/echo_watch/review/corrections.py",
+   "sha256": "2ad80e0ee8a70afdc5fd9c2f6e13723a1ec3f84bea7b593dbbc28e15cd7da601",
+   "origin": "lab-new",
+   "note": "",
+   "patterns_from_patronsight_archive": {
+    "src/patronsight/visitor_corrections.py": "e9cccb2698ae89c9d989633783f44247521b72ae46ec5ec8bea7582bbbce4574"
+   }
+  },
+  {
+   "path": "src/echo_watch/review/export.py",
+   "sha256": "951d1409cda2b141e6e4ce56928de62664ef0507803ec643d0d4a9cc89851042",
+   "origin": "lab-new",
+   "note": "",
+   "patterns_from_patronsight_archive": {
+    "src/patronsight/app/review_export.py": "b9810870d630cc6f15215ad6e48127b9b031c97280fe0efb6198ef18c44ac29d"
+   }
+  },
+  {
+   "path": "src/echo_watch/review/frames.py",
+   "sha256": "f1069f410c6c52a084ead10479c879b3278252cc8803ad9c0e89f9b5cffaaaf4",
+   "origin": "patronsight-archive (selected code)",
+   "archive_member": "src/patronsight/app/review_player.py",
+   "archive_sha256": "89ecddb21f91a4e18dc563a6a98854c340a3fca7d7e837f363f4772436b9816a",
+   "changed": true,
+   "note": "LatestWorker body unchanged; FFmpeg decoder new"
+  },
+  {
+   "path": "src/echo_watch/review/runs.py",
+   "sha256": "c66a4c2c521f0ca4609281597dfbe284c7564716927eefa551a293c8a3299eec",
+   "origin": "lab-new",
+   "note": "",
+   "patterns_from_patronsight_archive": {
+    "src/patronsight/app/session_review.py": "172796089a25544c007a4a8ca1b1c29f597c0f16bfc4e7780c97be8d769f3544",
+    "src/patronsight/app/session_review_state.py": "b85b8a962b36ba8678f6c36331babb680dadb1ab649ee3e46a0a3d9869cd20d7"
+   }
+  },
+  {
+   "path": "src/echo_watch/sources/__init__.py",
+   "sha256": "cb91549a78284905b4bc2556ca152111ef48e97b92ad6075a84309c6745e81e4",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/sources/__init__.py",
+   "archive_sha256": "cb91549a78284905b4bc2556ca152111ef48e97b92ad6075a84309c6745e81e4",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "src/echo_watch/sources/base.py",
+   "sha256": "79c3db409e8423e66ead468946ae55acb6dacba9eba8486f6169832d09020da0",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/sources/base.py",
+   "archive_sha256": "79c3db409e8423e66ead468946ae55acb6dacba9eba8486f6169832d09020da0",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "src/echo_watch/sources/ffmpeg_source.py",
+   "sha256": "2817c86a1503fab8371264de253e564c6833c8729c76c10b08ad6e471f1c7119",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/sources/ffmpeg_source.py",
+   "archive_sha256": "2817c86a1503fab8371264de253e564c6833c8729c76c10b08ad6e471f1c7119",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "src/echo_watch/sources/fingerprint.py",
+   "sha256": "b15a19fa4da6f7640894205d2998c207cdaaaea62a9a3c75ed79400fe5d6625e",
+   "origin": "lab-new",
+   "note": "EW-LAB-02 B: content scope file-sha256, chunked cancellable hashing, stability"
+  },
+  {
+   "path": "src/echo_watch/sources/video_probe.py",
+   "sha256": "c5065083720f8b058e930413679cd6a7cdadda5c8e0056e55e73c03f84b1e8f6",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/sources/video_probe.py",
+   "archive_sha256": "c5065083720f8b058e930413679cd6a7cdadda5c8e0056e55e73c03f84b1e8f6",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "src/echo_watch/vision.py",
+   "sha256": "a3803d48b9fbd8143c7d52e946e5c80a71f2968887818473c01fefe1f7f5472a",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/vision.py",
+   "archive_sha256": "a3803d48b9fbd8143c7d52e946e5c80a71f2968887818473c01fefe1f7f5472a",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "src/echo_watch/worker/__init__.py",
+   "sha256": "de8d242c4b1fecc7ccaaa34959b57db7f9f28245b73a38408f06d04b609a0e8a",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/worker/__init__.py",
+   "archive_sha256": "de8d242c4b1fecc7ccaaa34959b57db7f9f28245b73a38408f06d04b609a0e8a",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "src/echo_watch/worker/client.py",
+   "sha256": "c0fb184903c41ff3c4b19c7ef2fd478deb2f0ef8f6218211da18a55890bb7ba1",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/worker/client.py",
+   "archive_sha256": "d88381b64a6894240435c1d9c5e17cfd9516e1739a5dafa576f576694e6db17f",
+   "changed": true,
+   "note": "last_vram from replies; EW-LAB-06 R1: per-attempt reply queue/stderr capture (bounded, truncation marked), structured failures on fatal/EOF/exit/deadline"
+  },
+  {
+   "path": "src/echo_watch/worker/main.py",
+   "sha256": "1852d669a829c41f652ebd22b43bfd41e124311c444e52e60bfbe17753e720d2",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/worker/main.py",
+   "archive_sha256": "1852d669a829c41f652ebd22b43bfd41e124311c444e52e60bfbe17753e720d2",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "src/echo_watch/worker/standin.py",
+   "sha256": "67487416f2659683fa6d45e68a8d1f5cf42fb642dd8a85c32d311938b2b7011f",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/src/echo_watch/worker/standin.py",
+   "archive_sha256": "67487416f2659683fa6d45e68a8d1f5cf42fb642dd8a85c32d311938b2b7011f",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "src/echo_watch/yoloe/__init__.py",
+   "sha256": "cd041e43d8ef7430bf3eb8f3aeea4ccf02a391a26c5c980ab721490f39769e61",
+   "origin": "lab-new",
+   "note": "EW-LAB-06: YOLOE prompt-free detection + BoT-SORT tracking workspace package"
+  },
+  {
+   "path": "src/echo_watch/yoloe/association.py",
+   "sha256": "77c2c3fed4e630842a225f114d41f12405e4ed15e66f82c128e7f748568bb28d",
+   "origin": "lab-new",
+   "note": "EW-LAB-06: immutable detections, join by tracker-returned index with checks"
+  },
+  {
+   "path": "src/echo_watch/yoloe/bootstrap.py",
+   "sha256": "a1264e754088032fe21c1b32f91cc8497e6b6731a0501499d6316c32efbb4447",
+   "origin": "lab-new",
+   "note": "EW-LAB-06 R1: staged startup, structured fatal, requested/effective/observed receipt against the pinned Ultralytics 8.4.160 schema (quantize, not half)"
+  },
+  {
+   "path": "src/echo_watch/yoloe/botsort.yaml",
+   "sha256": "b2b389e22fd6180d1d27894a4020d959d47be0f6bc5c7c8402ae082d138eefc2",
+   "origin": "lab-new",
+   "note": "EW-LAB-06: values copied from installed Ultralytics 8.4.160 cfg/trackers/botsort.yaml (SHA-256 8cd88930...; AGPL-3.0); ReID off, sparseOptFlow; provenance header"
+  },
+  {
+   "path": "src/echo_watch/yoloe/client.py",
+   "sha256": "d0f3c8f8c87b6181d4da8e187a879e9ec6e5d53fc418e745c40625489c4c85e1",
+   "origin": "lab-new",
+   "note": "EW-LAB-06: WorkerClient subclass (command line + typed commands); client.py unchanged"
+  },
+  {
+   "path": "src/echo_watch/yoloe/evidence.py",
+   "sha256": "c473ef38df23c0113c612360dcfdc149715361b351d46a4bc0916c6722b077c6",
+   "origin": "lab-new",
+   "note": "EW-LAB-06: atomic manifest + bounded background JSONL trace writer"
+  },
+  {
+   "path": "src/echo_watch/yoloe/profile.py",
+   "sha256": "5aec52a7264851dd87e9be38e14f35ce63afa79b4d9aba3ea0c48482363a4191",
+   "origin": "lab-new",
+   "note": "EW-LAB-06: the one frozen detector/tracker profile, flat tracker-config reader, pins"
+  },
+  {
+   "path": "src/echo_watch/yoloe/review.py",
+   "sha256": "1655a182ae808cd2f3154090b157d20a809b24b83debf2d24e22d3310f48b7ea",
+   "origin": "lab-new",
+   "note": "EW-LAB-06: saved-test listing, offset paging, source verification, exact-frame adapter"
+  },
+  {
+   "path": "src/echo_watch/yoloe/session.py",
+   "sha256": "175309906ba4ea1744be1ac2bdc3b5b07b68459c6551e861a120dbb4850c8cff",
+   "origin": "lab-new",
+   "note": "EW-LAB-06: YOLOE run driver, commit-time validity, settlement, evidence"
+  },
+  {
+   "path": "src/echo_watch/yoloe/source.py",
+   "sha256": "ca8e1d7d57aa73bce2760c4189f3368269ddf8945c5ff7dea816cd8be6e18254",
+   "origin": "lab-new",
+   "note": "EW-LAB-06: ordered passthrough FFmpeg source with back-pressure, PTS mapping, media clock"
+  },
+  {
+   "path": "src/echo_watch/yoloe/tracker.py",
+   "sha256": "a74cec3552f9c8330565390b03a4a2fc5a5df29108df321a9277b838deadbc78",
+   "origin": "lab-new",
+   "note": "EW-LAB-06: adapter over the INSTALLED BOTSORT (snapshot/restore, tentative tracks)"
+  },
+  {
+   "path": "src/echo_watch/yoloe/worker.py",
+   "sha256": "f917bafc71747ea8eb5fb3578f8bb51b8b24729b9b6011106c2cb204c5ca8f93",
+   "origin": "lab-new",
+   "note": "EW-LAB-06: PF-only worker process, one predict + explicit tracker update per frame; protocol/guards pattern of worker/main.py (that file unchanged); R1: startup via bootstrap.start, quantize=None, RuntimeCapabilities effect boundary"
+  },
+  {
+   "path": "tests/conftest.py",
+   "sha256": "d80e438abba139a8bbe27682b7e79b2701cbb3330da1c638a944ec6a4f72ec3d",
+   "origin": "lab-new",
+   "note": ""
+  },
+  {
+   "path": "tests/lab05_support.py",
+   "sha256": "92b6145fcc98145da2831f1699163234c5b2e9f04d8b528fb0b936125203f135",
+   "origin": "lab-new",
+   "note": "EW-LAB-05 test support (synthetic stores, codec stubs, fake worker/session, real Start boundary)"
+  },
+  {
+   "path": "tests/lab05_view_harness.py",
+   "sha256": "d0c0416672e18f7a7b6b248dd4580feb1c56b25f51879a15897a8a5ff8704cfe",
+   "origin": "lab-new",
+   "note": "EW-LAB-05 GUI-free harness for the production renderers (recording sinks, Tk guard)"
+  },
+  {
+   "path": "tests/lab06_support.py",
+   "sha256": "87811e09eae738c5279e6b7e3ca2e0ffed405e4dc3671f371eede7203d890dbf",
+   "origin": "lab-new",
+   "note": "EW-LAB-06 test support (spy detector, scripted tracker, in-process worker core, scripted source)"
+  },
+  {
+   "path": "tests/pinned_ultralytics.py",
+   "sha256": "8bf9511639c85597907b5f14d2e7b6df5b2dfafc078caba12d84f913d47912ab",
+   "origin": "lab-new",
+   "note": "EW-LAB-06 R1: AST-extracted, hash-pinned installed Ultralytics config code for schema tests"
+  },
+  {
+   "path": "tests/support.py",
+   "sha256": "46305d2d3500456c6c6582e0b78dc2d504abde9f8e1ced14714c6bcb7eac9f8a",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/tests/support.py",
+   "archive_sha256": "2ad77b41b8a3d3821128efe5da46752e5b0408c09d62242a9d1fc68179b23a7c",
+   "changed": true,
+   "note": "see diff"
+  },
+  {
+   "path": "tests/test_adapted_modules.py",
+   "sha256": "044fcd376170939cd3c2b9507bbb63dcc6e73791d2d175a1c26c85a810016f68",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/tests/test_adapted_modules.py",
+   "archive_sha256": "044fcd376170939cd3c2b9507bbb63dcc6e73791d2d175a1c26c85a810016f68",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "tests/test_admitted_matching.py",
+   "sha256": "6412124153af4f757b7c7a2a35860e1face5176a4de08822a4c0c21b8feca188",
+   "origin": "lab-new",
+   "note": ""
+  },
+  {
+   "path": "tests/test_commit_freshness.py",
+   "sha256": "24dde43588f6b21507b688921ffcb15b4a9b37c90b3c3a9f9a094e4612d51198",
+   "origin": "lab-new",
+   "note": ""
+  },
+  {
+   "path": "tests/test_correction_truth.py",
+   "sha256": "0c06179bd8947289d1a9a162f57b6f49098891fd164eeb10fbbc915b63ceca07",
+   "origin": "lab-new",
+   "note": "EW-LAB-03 R1/R2 regressions"
+  },
+  {
+   "path": "tests/test_corrections_durable.py",
+   "sha256": "4564aa4bad7c8cd6f6c49e3b565cfabf4f69b7437064d0191b38ef16c531f373",
+   "origin": "lab-new",
+   "note": "EW-LAB-02 B/C regressions"
+  },
+  {
+   "path": "tests/test_display_schedule.py",
+   "sha256": "a8eb5ee036c82fe6b6ef693d031dd80b0f47882826a8cd4989825b9fa268ff89",
+   "origin": "lab-new",
+   "note": "EW-LAB-02 A regressions"
+  },
+  {
+   "path": "tests/test_import_closure.py",
+   "sha256": "f31059835b82b8c6c23f80562540590833d80c0b3fa551b7f689c886199a4342",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/tests/test_import_closure.py",
+   "archive_sha256": "2e50e2b9d292f593959701f28ccb30127e8300e0c05b059d2b3eb1b568002b6a",
+   "changed": true,
+   "note": "EW-LAB-06: torch/ultralytics also confined to yoloe/worker.py and yoloe/tracker.py"
+  },
+  {
+   "path": "tests/test_item_policy.py",
+   "sha256": "2a7412e427a023f960181b4052bda8c9df6d8b408d900fccf2f1647158cbb54f",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/tests/test_item_policy.py",
+   "archive_sha256": "4fedbe50d72ccd5eb6fb28e35b0bcb55a8e6dc415a5ff8205613f49deca26a24",
+   "changed": true,
+   "note": "fragmented-track move dx=120 -> -60 (old move placed the speaker under the watch box)"
+  },
+  {
+   "path": "tests/test_lab05_enrollment.py",
+   "sha256": "6108901d860495f2133cc64aa62dee0a321cf737c94e65e19209bc72bbd20857",
+   "origin": "lab-new",
+   "note": "EW-LAB-05 matrix 1-3: repeat-run enrollment, source isolation, immutable commands"
+  },
+  {
+   "path": "tests/test_lab05_monitor_motion.py",
+   "sha256": "211a12c5d48d11ff6a2044949e772ff43f629d3ed86809e360749f1d102a3b3d",
+   "origin": "lab-new",
+   "note": "EW-LAB-05 matrix 6: moving supported observation, uncertainty, old-basis/stale"
+  },
+  {
+   "path": "tests/test_lab05_setup_config.py",
+   "sha256": "3e37eb2b33e4c3d425b456b4dc26bc473936fd60fc7abd09c679c99bf3ba4636",
+   "origin": "lab-new",
+   "note": "EW-LAB-05 matrix 5: setup artifacts, exact binding, review allowance"
+  },
+  {
+   "path": "tests/test_lab05_views.py",
+   "sha256": "abbc8e5ddef39d6a8869cc4bad29ec3515a7d13ca102188fc37c7551a8fa4375",
+   "origin": "lab-new",
+   "note": "EW-LAB-05 matrix 4/7: four-step screens, gating, states, shared presentation, finish/Review"
+  },
+  {
+   "path": "tests/test_lab06_detection_association.py",
+   "sha256": "86d766dedc31f113f2dd302eb07ce0a1e359193d52bb42ace704377b5e2bb574",
+   "origin": "lab-new",
+   "note": "EW-LAB-06 matrix 1-2 (UI runtime): association, detector call wiring, pins"
+  },
+  {
+   "path": "tests/test_lab06_owner_controller.py",
+   "sha256": "7ad10d132846b0da80469da71c3d3cd3366e5341ab8708a01da48f9b9c76ddc5",
+   "origin": "lab-new",
+   "note": "EW-LAB-06 matrix 4/6: single owner, handover, controller, results without inference"
+  },
+  {
+   "path": "tests/test_lab06_presentation.py",
+   "sha256": "d608f63f11819c205f3d2eb21efec4df2f5fd0036b1233c78bb5c88cab9a7e04",
+   "origin": "lab-new",
+   "note": "EW-LAB-06 matrix 5: projections and production page renderers against sinks"
+  },
+  {
+   "path": "tests/test_lab06_r1_failure_readback.py",
+   "sha256": "e55f2828f9d7c7e5fc7a54cef2a47d4690f35e9c1e128302b58c14a35ae80722",
+   "origin": "lab-new",
+   "note": "EW-LAB-06 R1: failure into outcome/manifest/trace/reopen/page renderers"
+  },
+  {
+   "path": "tests/test_lab06_r1_startup.py",
+   "sha256": "4318c42b5d20cedccba06da0e120356c5269702613b5a4ff3f5c9b404eb7db3d",
+   "origin": "lab-new",
+   "note": "EW-LAB-06 R1: pinned-schema counterexample + production bootstrap with effects intercepted"
+  },
+  {
+   "path": "tests/test_lab06_r1_transport.py",
+   "sha256": "221ec71903b2c608cd2982f310ed61339f1fb098af4ad7a38e5bd585298e43d5",
+   "origin": "lab-new",
+   "note": "EW-LAB-06 R1: client diagnostic transport with the pipe boundary mocked"
+  },
+  {
+   "path": "tests/test_lab06_review.py",
+   "sha256": "1fb56e6f5b5f86ded8e063c0c91cd00febbf460b3b81d3ba6b7a16583079381a",
+   "origin": "lab-new",
+   "note": "EW-LAB-06 matrix 6: listing, paging, source verification, exact-frame selection"
+  },
+  {
+   "path": "tests/test_lab06_session.py",
+   "sha256": "c6e078a30cd578cf96c3ca0a3424a7a88314ee1ad0fd0f313057c3f089143084",
+   "origin": "lab-new",
+   "note": "EW-LAB-06 matrix 3/6: session lifecycle, settlement, epochs, evidence"
+  },
+  {
+   "path": "tests/test_lab06_source.py",
+   "sha256": "27fc934c34cc65fe431d7a74d8e03792eacee4305f05b4b661fcb0ccb255da14",
+   "origin": "lab-new",
+   "note": "EW-LAB-06 matrix 3: ordered source, PTS/VFR/gaps, back-pressure, pacing"
+  },
+  {
+   "path": "tests/test_latest_metrics_trace.py",
+   "sha256": "9197a321d49c04925312acba34783a4900e0ecdbf957de8bd8826f929aa83d9d",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/tests/test_latest_metrics_trace.py",
+   "archive_sha256": "9197a321d49c04925312acba34783a4900e0ecdbf957de8bd8826f929aa83d9d",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "tests/test_outcome_and_inspector.py",
+   "sha256": "9c1bb6e2dd11a8408aacdae25c6f90415d51e3523c75721ee7a15dfece27a788",
+   "origin": "lab-new",
+   "note": "EW-LAB-04 C1/C2 regressions (real renderers into non-widget sinks)"
+  },
+  {
+   "path": "tests/test_paired_presentation.py",
+   "sha256": "e98c74c46fd64038cccb6631c1e7bbcc8e88b2bab7f9c5476369b458f1ed3bf4",
+   "origin": "lab-new",
+   "note": "EW-LAB-03 R3 regressions (real view methods, no Tk)"
+  },
+  {
+   "path": "tests/test_pipeline.py",
+   "sha256": "89a52a234a2631c04da8be1f38dd9b8054e5ac919c6392061469398106f577da",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/tests/test_pipeline.py",
+   "archive_sha256": "89a52a234a2631c04da8be1f38dd9b8054e5ac919c6392061469398106f577da",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "tests/test_policy_rate_independence.py",
+   "sha256": "62fca6dac2d2be49c1c300ef8a4f47a9361979cfaad37f23b561e8bd539de63a",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/tests/test_policy_rate_independence.py",
+   "archive_sha256": "62fca6dac2d2be49c1c300ef8a4f47a9361979cfaad37f23b561e8bd539de63a",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "tests/test_recording.py",
+   "sha256": "3d6326cceb2d8fad40f1e7f7f358a3001b58afc2e8cfa5b04cfc2e97173b9dc4",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/tests/test_recording.py",
+   "archive_sha256": "3d6326cceb2d8fad40f1e7f7f358a3001b58afc2e8cfa5b04cfc2e97173b9dc4",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "tests/test_scorers.py",
+   "sha256": "8dd9ea2e5f06a1deb98c8f156c2c47c166da44612b4ca69129747a16ebe66a13",
+   "origin": "lab-new",
+   "note": ""
+  },
+  {
+   "path": "tests/test_session_lifecycle.py",
+   "sha256": "9ba9145c5f6c3979b7637977e2eb3edf08cc85d34ce64b20e8cac33824bc1a94",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/tests/test_session_lifecycle.py",
+   "archive_sha256": "c2381a71aaf2158be4f33a152adc69ea7c23b53fa4007d924bfe4d3755cdd0ca",
+   "changed": true,
+   "note": "see diff"
+  },
+  {
+   "path": "tests/test_workbench_controller.py",
+   "sha256": "79c60821da716d59a9ac6294f1a88c6fc993e43430d71bb79fc8de7a93329cec",
+   "origin": "lab-new",
+   "note": ""
+  },
+  {
+   "path": "tests/test_worker_client_library.py",
+   "sha256": "5e4a04ac06e678485c15d7260f7332c1a263662edfa831e627185a7a3f7d24cb",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/tests/test_worker_client_library.py",
+   "archive_sha256": "2ce5022955813bdaea7a8ef5a86d84affbf7625c2c1210bf4c71d253515a41f9",
+   "changed": true,
+   "note": "see diff"
+  },
+  {
+   "path": "tools/bootstrap/bootstrap_lab.py",
+   "sha256": "dacd6574bbcfab9a5fec2321db58387bbecd55629628bff96c85923e71c11a69",
+   "origin": "lab-new",
+   "note": ""
+  },
+  {
+   "path": "tools/bootstrap/env_offline.sh",
+   "sha256": "d506d8123e3378812a7b0ecd7af6b37af0a560f75dadb88b918691ddb89927ea",
+   "origin": "lab-new",
+   "note": ""
+  },
+  {
+   "path": "tools/build_source_zip.py",
+   "sha256": "3ceb097023d5062a5ad7e5952384913dcf0dc091a3c18d86d86e620cdbedcd6d",
+   "origin": "lab-new",
+   "note": ""
+  },
+  {
+   "path": "tools/intake/provenance.py",
+   "sha256": "d0e539ad2b2c2ad92eb090d5fc90cb5df9c39e90c094457b3f3c71d9d8963f2d",
+   "origin": "lab-new",
+   "note": ""
+  },
+  {
+   "path": "tools/lab06/run_tracker_check.py",
+   "sha256": "bb190d06002ed88d1cb83172a3e25be9be534fa6dc78e9d4920e487f7c6ac4b8",
+   "origin": "lab-new",
+   "note": "EW-LAB-06: windowless bounded launcher of the synthetic tracker check"
+  },
+  {
+   "path": "tools/lab06/tracker_synthetic_check.py",
+   "sha256": "b82a3a10e0b4bafbd82f52567622127d51db90206b7c4f0e37e6ec6fff9de2dd",
+   "origin": "lab-new",
+   "note": "EW-LAB-06: permitted synthetic CPU BoT-SORT check (GPU runtime, no model/CUDA)"
+  },
+  {
+   "path": "tools/provision/lap_wheel.py",
+   "sha256": "b6a23ee2a5573838307965d0b811d86ed06dbcb9b7a960e25ddc27ad6accaa6e",
+   "origin": "lab-new",
+   "note": "EW-LAB-06: bounded official fetch + offline inspection of the pinned lap wheel"
+  },
+  {
+   "path": "tools/qualify/admission.py",
+   "sha256": "022e4fbce3c1f78915fc78c1794a9b9afe859d8ccd4c992caf23e8a0e24fe384",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/tools/qualify/admission.py",
+   "archive_sha256": "022e4fbce3c1f78915fc78c1794a9b9afe859d8ccd4c992caf23e8a0e24fe384",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "tools/qualify/calibrate.py",
+   "sha256": "d34f008fca4b17314ae26340f77de8f48c2b355163753af20fc112507ec390a9",
+   "origin": "lab-new",
+   "note": ""
+  },
+  {
+   "path": "tools/qualify/collect_dev.py",
+   "sha256": "539b4f98bc292d7671211f5073eb8dc88d551fa745c40241c4fdd300b39eec4c",
+   "origin": "lab-new",
+   "note": ""
+  },
+  {
+   "path": "tools/qualify/common.py",
+   "sha256": "25d9577356e8bff0947d9041cf2a02ba399651ff13abbf41ca55c98348438706",
+   "origin": "lab-new",
+   "note": ""
+  },
+  {
+   "path": "tools/qualify/evaluate.py",
+   "sha256": "40ef407de73f5fa0292e6d1750e5a482b96db4be93913e657ce0a17ae0d2e971",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/tools/qualify/evaluate.py",
+   "archive_sha256": "235113f586665bd6abce1139f87673515162e83b5824b61fd74b715b79c37802",
+   "changed": true,
+   "note": "rewritten: defects B (endpoint/gaps/pauses/failed) and C (complete pairing evidence)"
+  },
+  {
+   "path": "tools/qualify/evaluate_native_v0.py",
+   "sha256": "80e8ef7c03de9d1fd03c3b4a6cadaf0d2f1d4257c08a985b275c7c28ce4af372",
+   "origin": "lab-new",
+   "note": "PRESERVED adopted scorer (header comment only) for baseline/counterexamples"
+  },
+  {
+   "path": "tools/qualify/identities.py",
+   "sha256": "650393e58859a98d1810726705159273bd12d96f7957ed610d0ff0fd815b7bc9",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/tools/qualify/identities.py",
+   "archive_sha256": "650393e58859a98d1810726705159273bd12d96f7957ed610d0ff0fd815b7bc9",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "tools/qualify/make_lab_scenes.py",
+   "sha256": "a8c28f7ea5571d4da1bdf2155f5cb0fa7c096cb75e2e0b45f5f71c8203a608da",
+   "origin": "lab-new",
+   "note": ""
+  },
+  {
+   "path": "tools/qualify/make_scene.py",
+   "sha256": "7df83532d95920f7628058aea6286369c8f0fa3443950a6857ce8b083cb85f19",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/tools/qualify/make_scene.py",
+   "archive_sha256": "7df83532d95920f7628058aea6286369c8f0fa3443950a6857ce8b083cb85f19",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "tools/qualify/reevaluate.py",
+   "sha256": "b7e348a412aeb6dda2b66305ad558c4924a0e96a963a54c5be7b91e4a9b6f3bf",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/tools/qualify/reevaluate.py",
+   "archive_sha256": "b7e348a412aeb6dda2b66305ad558c4924a0e96a963a54c5be7b91e4a9b6f3bf",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "tools/qualify/replay_dev.py",
+   "sha256": "2ab04443c979d447d0c6b67f127f19a6912bb1bf3950864923d7f1b25838941d",
+   "origin": "lab-new",
+   "note": ""
+  },
+  {
+   "path": "tools/qualify/report.py",
+   "sha256": "440ba1b0b40ef30650bb2684a60e3b6cd550839f045b89c2b43dcf2a34877f92",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/tools/qualify/report.py",
+   "archive_sha256": "440ba1b0b40ef30650bb2684a60e3b6cd550839f045b89c2b43dcf2a34877f92",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "tools/qualify/run_session.py",
+   "sha256": "0bedaa887537ba599220502eefd63836380e6e714d7fdab14e405c54e8294419",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/tools/qualify/run_session.py",
+   "archive_sha256": "51489713b6b81f97d944c72bfa9000b2683de72b3425894dbab216877cbe56cf",
+   "changed": true,
+   "note": "Lab scenarios, admission child, corrected scorers, worker-VRAM guard"
+  },
+  {
+   "path": "tools/qualify/scoring.py",
+   "sha256": "053b01aba6705919af65603de7d1ae22513c996c33a8c297d27ecbe99b8215ca",
+   "origin": "lab-new",
+   "note": ""
+  },
+  {
+   "path": "tools/qualify/states.py",
+   "sha256": "522af4d2aa88a8ceec28f5513ec48c19c31f22061f7361d0c8e370f26da7ab03",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/tools/qualify/states.py",
+   "archive_sha256": "522af4d2aa88a8ceec28f5513ec48c19c31f22061f7361d0c8e370f26da7ab03",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "tools/run_tests.py",
+   "sha256": "facf3557d140c469fc5cc1641af2207f5cab175dc269504b2acc89473e39f90e",
+   "origin": "lab-new",
+   "note": ""
+  },
+  {
+   "path": "requirements/dev.lock",
+   "sha256": "e51f3467ee839f23d2d310b4e715a4011ae7ecbe8b77b7135ee5be323a35346f",
+   "origin": "lab-new",
+   "note": ""
+  },
+  {
+   "path": "requirements/gpu-tracker.lock",
+   "sha256": "13dd8b38a36ac659e7958bea5dc1454e21439191ba496b1317b96f977efb1916",
+   "origin": "lab-new",
+   "note": "EW-LAB-06: hash-locked lap 0.5.13 (owner-approved exact wheel)"
+  },
+  {
+   "path": "requirements/gpu-worker.lock",
+   "sha256": "c670e4f17e783390202e74f6b14777194492da41e5ee76f209ff121035c2aca9",
+   "origin": "native-archive",
+   "archive_member": "echo-watch-native-0.2.0-foundation/requirements/gpu-worker.lock",
+   "archive_sha256": "c670e4f17e783390202e74f6b14777194492da41e5ee76f209ff121035c2aca9",
+   "changed": false,
+   "note": "unchanged"
+  },
+  {
+   "path": "requirements/ui.lock",
+   "sha256": "81f03a4d0c071b9dbab62517ac939264a544241dea4f0f4eb68fb68b6c7d84e1",
+   "origin": "lab-new",
+   "note": ""
+  }
+ ],
+ "src_tree_sha256": "620984de7105211261ddc4058eea71f0bfdb8cc2faf5bc6e97551f62b33ad014"
+}

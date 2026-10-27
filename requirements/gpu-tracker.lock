@@ -1,0 +1,3 @@
+# ECHO Watch Lab EW-LAB-06 tracker supply (owner-approved; exact pinned wheel, official PyPI file, BSD-2-Clause).
+# GPU worker runtime only. Offline install: --no-index --no-deps --only-binary=:all: --require-hashes (vendor/downloads/lap-0.5.13).
+lap==0.5.13 --hash=sha256:1170bd45958733e3ce00ba116fe5e5f1b49b744310d32eca8bf84f71121b7811

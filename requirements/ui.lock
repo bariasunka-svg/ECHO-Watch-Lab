@@ -1,0 +1,7 @@
+# ECHO Watch Lab UI process lock (EW-LAB-01). Derived from Native verify.lock (archive tree 3d14d650...).
+# Closed dependency set from wheel METADATA. Install: --no-index --require-hashes --only-binary=:all: --no-deps
+imageio-ffmpeg==0.6.0 --hash=sha256:02fa47c83703c37df6bfe4896aab339013f62bf02c5ebf2dce6da56af04ffc0a
+numpy==2.5.4 --hash=sha256:8b4d2fd2d34e5f8c9235ee787de5631a37a28402b15cb80814df973d2be54129
+opencv-python==4.10.0.84 --hash=sha256:32dbbd94c26f611dc5cc6979e6b7aa1f55a64d6b463cc1dcd3c95505a63e48fe
+pillow==13.0.0 --hash=sha256:9dda0788a9932776a75d8bcc020076edc308ce2508b51f6739a45e3158b3fc42
+psutil==7.2.2 --hash=sha256:eb7e81434c8d223ec4a219b5fc1c47d0417b12be7ea866e24fb5ad6e84b3d988
